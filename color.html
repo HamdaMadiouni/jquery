@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>selectcolor</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="color.js"></script>
+	<link rel="stylesheet" type="text/css" href="color.css">
+</head>
+<body>
+<section id="cercle">
+	<div class="cercle" id="cercle1"></div>
+	<div class="cercle" id="cercle2"></div>
+	<div class="cercle" id="cercle3"></div>
+</section>
+<section><button id="new-color">new color</button></section>
+
+<section class="carre hide">
+	<div class="parent" >
+<div class="div1" id="box"></div>
+<div class="div2"> <button id="add-color">add color</button></div>
+<div class="div3"><label>RED</label> <input type="range" name="" min="0" max="255"  id="red"></div>
+<div class="div4"><label>Green</label> <input type="range" name="" min="0" max="255" id="green"></div>
+<div class="div5"><label>Blue</label> <input type="range" name="" min="0" max="255" id="blue"></div>
+</div>
+</section>
+<script src="index.js"></script>
+<script>
+		let red=$('#red').val();
+		let green=$('#green').val();
+		let blue=$('#blue').val();
+	
+	$('#red').change(function(){
+		
+		red=($(this).val());
+		$('.div1').css('backgroundColor','rgb('+red+','+green+','+blue+')')
+		
+	})
+	$('#green').change(function(){
+		
+		 green=($(this).val());
+		$('.div1').css('backgroundColor','rgb('+red+','+green+','+blue+')')})
+	$('#blue').change(function(){
+		
+		blue =($(this).val());
+	$('.div1').css('backgroundColor','rgb('+red+','+green+','+blue+')')})
+	
+
+	
+</script>
+</body>
+</html>
